@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+  <!-- We are using HEAD fragment here -->
+  <head th:replace="~{/fragments/head :: head}"></head>
+
+
+<body class="sub_page">
+
+  <div class="hero_area">
+    <div class="bg-box">
+      <img src="images/nav-bg.jpg" alt="">
+    </div>
+    <!-- We are using HEADER fragment here -->
+     <header th:replace="~{/fragments/header :: header}"></header>
+  </div>
+
+ <!-- book section -->
+ <section class="book_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Login
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form_container">
+            <form action="#"
+                th:action="@{/login}"
+                method="post">
+              <div>
+                <input class="form-control" type="text" name="email" placeholder="Email">
+              </div>
+              <div>
+                <input class="form-control" name="password" type="password"  placeholder="Password" />
+              </div>
+              <div class="btn_box">
+                <button type="submit">
+                  Login
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end book section -->
+  
+  <!-- We are using FOOTER fragment here -->
+  <footer th:replace="~{/fragments/footer :: footer}"></footer>
+  <!-- end about section -->
+
+</body>
+</html>

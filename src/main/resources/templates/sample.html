@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+  <!-- We are using HEAD fragment here -->
+  <head th:replace="~{/fragments/head :: head}"></head>
+
+
+<body class="sub_page">
+
+  <div class="hero_area">
+    <div class="bg-box">
+      <img src="images/nav-bg.jpg" alt="">
+    </div>
+    <!-- We are using HEADER fragment here -->
+     <header th:replace="~{/fragments/header :: header}"></header>
+  </div>
+
+  <!-- about section -->
+
+  <section class="about_section layout_padding">
+    <div class="container  ">
+
+      
+    </div>
+  </section>
+  
+  <!-- We are using FOOTER fragment here -->
+  <footer th:replace="~{/fragments/footer :: footer}"></footer>
+  <!-- end about section -->
+
+</body>
+</html>
