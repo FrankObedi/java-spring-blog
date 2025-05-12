@@ -1,4 +1,4 @@
-package org.frankobedi.SpringStarter.util.constants;
+package org.frankobedi.SpringBlog.util.constants;
 
 public enum Privillages {
     RESET_ANY_USER_PASSWORD(1L, "RESET_ANY_USER_PASSWORD"),

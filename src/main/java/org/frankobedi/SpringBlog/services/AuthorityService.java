@@ -1,9 +1,9 @@
-package org.frankobedi.SpringStarter.services;
+package org.frankobedi.SpringBlog.services;
 
 import java.util.Optional;
 
-import org.frankobedi.SpringStarter.models.Authority;
-import org.frankobedi.SpringStarter.repositories.AuthorityRepository;
+import org.frankobedi.SpringBlog.models.Authority;
+import org.frankobedi.SpringBlog.repositories.AuthorityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

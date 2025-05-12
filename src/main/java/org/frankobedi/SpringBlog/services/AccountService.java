@@ -1,12 +1,12 @@
-package org.frankobedi.SpringStarter.services;
+package org.frankobedi.SpringBlog.services;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import org.frankobedi.SpringStarter.models.Account;
-import org.frankobedi.SpringStarter.repositories.AccountRepository;
-import org.frankobedi.SpringStarter.util.constants.Roles;
+import org.frankobedi.SpringBlog.models.Account;
+import org.frankobedi.SpringBlog.repositories.AccountRepository;
+import org.frankobedi.SpringBlog.util.constants.Roles;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

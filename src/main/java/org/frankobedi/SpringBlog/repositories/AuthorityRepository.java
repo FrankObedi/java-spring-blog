@@ -1,6 +1,6 @@
-package org.frankobedi.SpringStarter.repositories;
+package org.frankobedi.SpringBlog.repositories;
 
-import org.frankobedi.SpringStarter.models.Authority;
+import org.frankobedi.SpringBlog.models.Authority;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,11 +1,11 @@
-package org.frankobedi.SpringStarter.services;
+package org.frankobedi.SpringBlog.services;
 
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
-import org.frankobedi.SpringStarter.models.Post;
-import org.frankobedi.SpringStarter.repositories.PostRepository;
+import org.frankobedi.SpringBlog.models.Post;
+import org.frankobedi.SpringBlog.repositories.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;;
 

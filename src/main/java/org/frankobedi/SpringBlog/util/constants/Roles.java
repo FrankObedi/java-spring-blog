@@ -1,4 +1,4 @@
-package org.frankobedi.SpringStarter.util.constants;
+package org.frankobedi.SpringBlog.util.constants;
 
 public enum Roles {
     USER("ROLE_USER"), ADMIN("ROLE_ADMIN"), EDITOR("ROLE_EDITOR");

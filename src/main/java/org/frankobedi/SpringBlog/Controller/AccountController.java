@@ -1,7 +1,7 @@
-package org.frankobedi.SpringStarter.Controller;
+package org.frankobedi.SpringBlog.Controller;
 
-import org.frankobedi.SpringStarter.models.Account;
-import org.frankobedi.SpringStarter.services.AccountService;
+import org.frankobedi.SpringBlog.models.Account;
+import org.frankobedi.SpringBlog.services.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

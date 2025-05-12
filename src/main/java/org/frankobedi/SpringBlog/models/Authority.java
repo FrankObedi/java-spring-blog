@@ -1,4 +1,4 @@
-package org.frankobedi.SpringStarter.models;
+package org.frankobedi.SpringBlog.models;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

@@ -1,8 +1,8 @@
-package org.frankobedi.SpringStarter.Controller;
+package org.frankobedi.SpringBlog.Controller;
 import java.util.List;
 
-import org.frankobedi.SpringStarter.models.Post;
-import org.frankobedi.SpringStarter.services.PostService;
+import org.frankobedi.SpringBlog.models.Post;
+import org.frankobedi.SpringBlog.services.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

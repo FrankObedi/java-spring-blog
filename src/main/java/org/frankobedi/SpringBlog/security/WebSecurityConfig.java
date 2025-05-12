@@ -1,4 +1,4 @@
-package org.frankobedi.SpringStarter.security;
+package org.frankobedi.SpringBlog.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

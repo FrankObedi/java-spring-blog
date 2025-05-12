@@ -1,17 +1,17 @@
-package org.frankobedi.SpringStarter.config;
+package org.frankobedi.SpringBlog.config;
 
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import org.frankobedi.SpringStarter.models.Account;
-import org.frankobedi.SpringStarter.models.Authority;
-import org.frankobedi.SpringStarter.models.Post;
-import org.frankobedi.SpringStarter.services.AccountService;
-import org.frankobedi.SpringStarter.services.AuthorityService;
-import org.frankobedi.SpringStarter.services.PostService;
-import org.frankobedi.SpringStarter.util.constants.Privillages;
-import org.frankobedi.SpringStarter.util.constants.Roles;
+import org.frankobedi.SpringBlog.models.Account;
+import org.frankobedi.SpringBlog.models.Authority;
+import org.frankobedi.SpringBlog.models.Post;
+import org.frankobedi.SpringBlog.services.AccountService;
+import org.frankobedi.SpringBlog.services.AuthorityService;
+import org.frankobedi.SpringBlog.services.PostService;
+import org.frankobedi.SpringBlog.util.constants.Privillages;
+import org.frankobedi.SpringBlog.util.constants.Roles;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
