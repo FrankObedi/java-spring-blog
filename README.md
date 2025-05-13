@@ -16,7 +16,7 @@ This project allows users to register, log in, and manage blog posts within a se
 
 - **Backend**: Java, Spring Boot, Spring Security, Spring Data JPA
 - **Frontend**: Thymeleaf, Bootstrap, HTML, CSS
-- **Database**: H2 (in-memory) or MySQL (configurable)
+- **Database**: H2 (for now while under development); Will use MySQL in product
 - **Build Tool**: Maven
 
 ## 🔧 Setup Instructions
