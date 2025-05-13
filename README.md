@@ -25,3 +25,27 @@ This project allows users to register, log in, and manage blog posts within a se
    ```bash
    git clone https://github.com/FrankObedi/java-spring-blog.git
    cd java-spring-blog
+   
+2. **Configure the Database**
+- Default setup uses an in-memory H2 database.
+- To switch to MySQL, update application.properties:
+  - spring.datasource.url=jdbc:mysql://localhost:3306/blogdb
+  - spring.datasource.username=yourUsername
+  - pring.datasource.password=yourPassword
+  - spring.jpa.hibernate.ddl-auto=update
+
+3. **Run the Application**
+   ```bash
+   ./mvnw spring-boot:run
+
+
+📌 Future Enhancements
+- Add user roles (admin/editor)
+
+- Enable post categories and tagging
+
+- Add rich text editing with a WYSIWYG editor
+
+- Deploy to Heroku or Render
+
+- Add REST API for external integration
