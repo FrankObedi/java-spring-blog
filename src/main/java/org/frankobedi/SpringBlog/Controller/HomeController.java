@@ -1,4 +1,4 @@
-package org.frankobedi.SpringBlog.Controller;
+package org.frankobedi.SpringBlog.controller;
 import java.util.List;
 
 import org.frankobedi.SpringBlog.models.Post;

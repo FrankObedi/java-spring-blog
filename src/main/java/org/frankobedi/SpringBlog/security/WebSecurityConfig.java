@@ -46,7 +46,7 @@ public class WebSecurityConfig {
             // Enable logout functionality
             .logout(logout -> logout
                 .logoutUrl("/logout") // Custom logout URL
-                .logoutSuccessUrl("/logout?success=true") // Redirect on successful logout
+                .logoutSuccessUrl("/") // Redirect to home on successful logout
             )
             // Permit all users to access login and logout pages
             .authorizeHttpRequests(auth -> auth

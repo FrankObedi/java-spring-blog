@@ -182,3 +182,6 @@ org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (
 2025-05-08 16:58:52.331319-04:00 jdbc[13]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select * from [*]*"; expected "identifier"; SQL statement:
 select * from * [42001-232]
+2025-05-15 13:15:45.121616-04:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM AUTHORITY ACCOUNT_AUTHORITY [*]POST"; SQL statement:
+SELECT * FROM AUTHORITY ACCOUNT_AUTHORITY POST [42000-232]

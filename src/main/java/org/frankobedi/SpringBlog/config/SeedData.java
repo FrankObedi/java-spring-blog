@@ -46,38 +46,39 @@ public class SeedData implements CommandLineRunner{
             authorityService.save(authority);
         }
 
-        
+        Set<Authority> authoritySet = new HashSet<>();
+        authorityService.findById(Privillages.RESET_ANY_USER_PASSWORD.getId()).ifPresent(authoritySet::add);
+        authorityService.findById(Privillages.ACCESS_ADMIN_PANEL.getId()).ifPresent(authoritySet::add);
+
         account01.setEmail("frankobedi6@gmail.com");
         account01.setFirstname("Frank");
         account01.setLastname("Obedi");
         account01.setPassword("12345");
         account01.setRole(Roles.ADMIN.getRole());
-        accountService.save(account01);
+        account01.setAuthorities(authoritySet);
 
         // Regular user
         account02.setEmail("kasongo@gmail.ken");
         account02.setFirstname("Kasongo");
         account02.setLastname("Yeye");
         account02.setPassword("2468");
-        accountService.save(account02);
-
 
         account03.setEmail("super_editor@app.com");
         account03.setFirstname("Site");
         account03.setLastname("Admin");
         account03.setPassword("111");
         account03.setRole(Roles.EDITOR.getRole());
-        Set<Authority> authoritySet = new HashSet<>();
-        authorityService.findById(Privillages.RESET_ANY_USER_PASSWORD.getId()).ifPresent(authoritySet::add);
-        authorityService.findById(Privillages.ACCESS_ADMIN_PANEL.getId()).ifPresent(authoritySet::add);
-        account03.setAuthrity(authoritySet);
-        accountService.save(account03);
 
         account04.setEmail("editor@app.com");
         account04.setFirstname("Web");
         account04.setLastname("Editor");
         account04.setPassword("333");
         account04.setRole(Roles.EDITOR.getRole());
+
+        
+        accountService.save(account01);
+        accountService.save(account02);
+        accountService.save(account03);
         accountService.save(account04);
 
 

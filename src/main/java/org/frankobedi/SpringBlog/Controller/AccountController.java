@@ -1,4 +1,4 @@
-package org.frankobedi.SpringBlog.Controller;
+package org.frankobedi.SpringBlog.controller;
 
 import org.frankobedi.SpringBlog.models.Account;
 import org.frankobedi.SpringBlog.services.AccountService;
