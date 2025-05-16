@@ -21,9 +21,5 @@ public class HomeController {
         model.addAttribute("posts", posts);
         return "home"; // 'home' is the name of the tempalte to render
     }  
-    
-    @GetMapping("/editor")
-    public String editor(Model model){
-        return "editor";
-    }
+
 }

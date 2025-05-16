@@ -34,5 +34,10 @@ public class AccountController {
     @GetMapping("/login")
     public String login(Model model) {        
         return "login";
-    }    
+    }
+    
+    @GetMapping("/profile")
+    public String profile(Model model){
+        return "profile";
+    }
 }

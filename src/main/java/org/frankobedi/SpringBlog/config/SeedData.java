@@ -60,7 +60,7 @@ public class SeedData implements CommandLineRunner{
         account01.setAuthorities(authoritySet);
 
         // Regular user
-        account02.setEmail("kasongo@gmail.ken");
+        account02.setEmail("user@app.com");
         account02.setFirstname("Kasongo");
         account02.setLastname("Yeye");
         account02.setPassword("2468");

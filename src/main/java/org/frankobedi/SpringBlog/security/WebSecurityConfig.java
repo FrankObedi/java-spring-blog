@@ -1,5 +1,6 @@
 package org.frankobedi.SpringBlog.security;
 
+import org.frankobedi.SpringBlog.util.constants.Privillages;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import static org.springframework.security.config.Customizer.withDefaults;
@@ -34,6 +35,14 @@ public class WebSecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
+             // Permit all users to access login and logout pages
+            .authorizeHttpRequests(auth -> auth
+                .requestMatchers(WHITELIST).permitAll()
+                .requestMatchers("/profile/**").authenticated() // authenticate anything after 'profile' only
+                .requestMatchers("/admin/**").hasRole("ADMIN")
+                .requestMatchers("/editor/**").hasAnyRole("EDITOR", "ADMIN") // editor panel accessible by editor and admin
+                .requestMatchers("admin/**").hasAuthority(Privillages.ACCESS_ADMIN_PANEL.getPrivillage())
+            )
             // Enable form-based authentication
             .formLogin(form -> form
                 .loginPage("/login") // Custom login page URL
@@ -46,12 +55,7 @@ public class WebSecurityConfig {
             // Enable logout functionality
             .logout(logout -> logout
                 .logoutUrl("/logout") // Custom logout URL
-                .logoutSuccessUrl("/") // Redirect to home on successful logout
-            )
-            // Permit all users to access login and logout pages
-            .authorizeHttpRequests(auth -> auth
-                .requestMatchers(WHITELIST).permitAll()
-                .anyRequest().authenticated()
+                .logoutSuccessUrl("/login") // Redirect to home on successful logout
             )
             // Use HTTP Basic authentication
             .httpBasic(withDefaults());
