@@ -25,6 +25,7 @@ public class WebSecurityConfig {
         "/fonts/**",
         "/images/**",
         "/js/**"
+
     };
 
     @Bean
@@ -41,7 +42,9 @@ public class WebSecurityConfig {
                 .requestMatchers("/profile/**").authenticated() // authenticate anything after 'profile' only
                 .requestMatchers("/admin/**").hasRole("ADMIN")
                 .requestMatchers("/editor/**").hasAnyRole("EDITOR", "ADMIN") // editor panel accessible by editor and admin
-                .requestMatchers("admin/**").hasAuthority(Privillages.ACCESS_ADMIN_PANEL.getPrivillage())
+                .requestMatchers("/admin/**").hasAuthority(Privillages.ACCESS_ADMIN_PANEL.getPrivillage())
+                .requestMatchers("/posts/**").authenticated()
+
             )
             // Enable form-based authentication
             .formLogin(form -> form

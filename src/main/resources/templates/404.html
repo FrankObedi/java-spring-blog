@@ -9,7 +9,7 @@
 
   <div class="hero_area">
     <div class="bg-box">
-      <img src="images/nav-bg.jpg" alt="">
+      <img th:src="@{/images/nav-bg.jpg}" alt="">
     </div>
     <!-- We are using HEADER fragment here -->
      <header th:replace="~{/fragments/header :: header}"></header>
@@ -18,15 +18,8 @@
   <!-- about section -->
 
   <section class="about_section layout_padding">
-    <div class="container ">
-      <div>
-        <p></p>
-      </div>
-      <div class="posts" th:each="post : ${posts}">
-        <h3 th:text="${post.title}">Title</h3>
-        <p th:text="${post.body}">body</p>
-        <hr/>
-      </div>
+    <div class="container  ">
+        <h3>Page Not Found 😣</h3>
       
     </div>
   </section>
