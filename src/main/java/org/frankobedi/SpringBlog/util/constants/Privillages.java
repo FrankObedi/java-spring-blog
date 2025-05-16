@@ -18,6 +18,5 @@ public enum Privillages {
 
     public String getPrivillage(){
         return privilage;
-    }
-    
+    }    
 }

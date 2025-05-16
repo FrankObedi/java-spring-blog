@@ -47,8 +47,10 @@ public class SeedData implements CommandLineRunner{
         }
 
         Set<Authority> authoritySet = new HashSet<>();
+         Set<Authority> authoritySet2 = new HashSet<>();
         authorityService.findById(Privillages.RESET_ANY_USER_PASSWORD.getId()).ifPresent(authoritySet::add);
         authorityService.findById(Privillages.ACCESS_ADMIN_PANEL.getId()).ifPresent(authoritySet::add);
+        authorityService.findById(Privillages.ACCESS_ADMIN_PANEL.getId()).ifPresent(authoritySet2::add);
 
         account01.setEmail("frankobedi6@gmail.com");
         account01.setFirstname("Frank");
@@ -68,6 +70,7 @@ public class SeedData implements CommandLineRunner{
         account03.setLastname("Admin");
         account03.setPassword("111");
         account03.setRole(Roles.EDITOR.getRole());
+        account03.setAuthorities(authoritySet2);
 
         account04.setEmail("editor@app.com");
         account04.setFirstname("Web");
