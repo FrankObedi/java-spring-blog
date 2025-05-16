@@ -21,11 +21,14 @@
     <div class="container  ">
         <div class="post">
           <h1 th:text="${post.title}"></h1>
-          <h6 th:text="${post.account.firstname} + ' | ' + ${post.dateCreated}"></h6>
+          <h5 th:text="${post.account.firstname} + ' | ' + ${post.dateCreated}"></h5>
           <p th:text="${post.body}"></p>
         </div>
-      
-    </div>
+      <hr color="grey">
+      <div class="align-right" sec:authorize="isAuthenticated()" th:if="${isOwner}">
+        <a th:href="@{'/edit_post/' + ${post.id}}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Edit Post</a>
+      </div>
+      </div>
   </section>
   
   <!-- We are using FOOTER fragment here -->

@@ -43,7 +43,7 @@ public class WebSecurityConfig {
                 .requestMatchers("/admin/**").hasRole("ADMIN")
                 .requestMatchers("/editor/**").hasAnyRole("EDITOR", "ADMIN") // editor panel accessible by editor and admin
                 .requestMatchers("/admin/**").hasAuthority(Privillages.ACCESS_ADMIN_PANEL.getPrivillage())
-                .requestMatchers("/posts/**").authenticated()
+                .requestMatchers("/post/**").authenticated()
 
             )
             // Enable form-based authentication
